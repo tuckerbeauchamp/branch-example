@@ -16,7 +16,7 @@
     <div class="container">
       <h1 class="text-center">Todo App!</h1>
       <div class="row">
-        <form>
+        <form id="todo-form">
           <div class="mb-3">
             <label for="todo-text" class="form-label">Add Todo</label>
             <input type="text" class="form-control" id="todo-text" />
@@ -25,5 +25,15 @@
         </form>
       </div>
     </div>
+
+    <script>
+      const form = document.getElementById("todo-form");
+
+      function handleSubmit(e) {
+        e.preventDefault();
+        console.log("Handled the submit for our form");
+      }
+      form.addEventListener("submit", handleSubmit);
+    </script>
   </body>
 </html>
